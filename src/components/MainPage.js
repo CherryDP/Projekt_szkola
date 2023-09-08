@@ -4,25 +4,22 @@ import './MainPage.css'; // Stylizacja CSS
 function MainPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubjectOpen, setIsSubjectOpen] = useState(false);
-  const [isZawodoweOpen, setIsZawodoweOpen] = useState(false);
-  const [isOgolneOpen, setIsOgolneOpen] = useState(false);
+  const [isKierunekOpen, setIsKierunekOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleKierunek = () => {
+    setIsKierunekOpen(!isKierunekOpen);
+  };
+
   const toggleSubject = () => {
     setIsSubjectOpen(!isSubjectOpen);
   };
 
-  const toggleZawodowe = () => {
-    setIsZawodoweOpen(!isZawodoweOpen);
-  };
-
-  const toggleOgolne = () => {
-    setIsOgolneOpen(!isOgolneOpen);
-  };
+  
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -53,16 +50,6 @@ function MainPage() {
           <ul onClick={toggleSubject}>Przedmioty</ul>
           {isSubjectOpen && (
             <div>
-              <ul onClick={toggleZawodowe}>Zawodowe</ul>
-              {isZawodoweOpen && (
-                <ul className="submenu">
-                  <li>Przedmiot 1</li>
-                  <li>Przedmiot 2</li>
-                  <li>Przedmiot 3</li>
-                </ul>
-              )}
-              <ul onClick={toggleOgolne}>Ogólne</ul>
-              {isOgolneOpen && (
                 <ul className="submenu">
                   <li>J.Polski</li>
                   <li>Matematyka</li>
@@ -74,7 +61,18 @@ function MainPage() {
                   <li>Plastyka</li>
                   <li>Muzyka</li>
                 </ul>
-              )}
+            </div>
+          )}
+          <ul onClick={toggleKierunek}>Kierunki</ul>
+          {isKierunekOpen && (
+            <div> 
+                <ul className="submenu">
+                  <li>Programista</li>
+                  <li>Programista</li>
+                  <li>Programista</li>
+                  <li>Programista</li>
+
+                </ul>
             </div>
           )}
         </ul>
