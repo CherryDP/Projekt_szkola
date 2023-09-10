@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css'; // Stylizacja CSS
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ function Header() {
           <ul>
             <ul onClick={toggleSubject}>Przedmioty</ul>
             <ul className={`submenu ${isSubjectOpen ? 'open' : ''}`}>
-              <li>J.Polski</li>
+            <li> J.Polski</li>
               <li>J.Angielski</li>
               <li>J.Niemiecki</li>
               <li>J.Rosyjski</li>
@@ -84,3 +85,5 @@ function Header() {
 }
 
 export default Header;
+
+
