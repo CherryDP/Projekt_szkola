@@ -24,6 +24,12 @@ function Header() {
     setSearchQuery(e.target.value);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsSubjectOpen(false);
+    setIsKierunekOpen(false);
+  };
+
   return (
     <header className="main-page">
       <div className="header">
@@ -49,19 +55,19 @@ function Header() {
           <ul>
             <ul onClick={toggleSubject}>Przedmioty</ul>
             <ul className={`submenu ${isSubjectOpen ? 'open' : ''}`}>
-            <li> J.Polski</li>
-              <li>J.Angielski</li>
-              <li>J.Niemiecki</li>
-              <li>J.Rosyjski</li>
-              <li>J.Hiszpański</li>
-              <li>Matematyka</li>
-              <li>Historia</li>
-              <li>Geografia</li>
-              <li>Wf</li>
-              <li>Plastyka</li>
-              <li>Muzyka</li>
-              <li>Wos</li>
-              <li>Biologia</li>
+              <li> <Link to="/polski" className="Link" onClick={closeMenu}>J.Polski</Link></li>
+              <li> <Link to="/angielski" className="Link" onClick={closeMenu}>J.Angielski</Link></li>
+              <li> <Link to="/niemiecki" className="Link" onClick={closeMenu}>J.Niemiecki</Link></li>
+              <li> <Link to="/rosyjski" className="Link" onClick={closeMenu}>J.Rosyjski</Link></li>
+              <li> <Link to="/hiszpanski" className="Link" onClick={closeMenu}>J.Hiszpański</Link></li>
+              <li> <Link to="/matematyka" className="Link" onClick={closeMenu}>Matematyka</Link></li>
+              <li> <Link to="/historia" className="Link" onClick={closeMenu}>Historia</Link></li>
+              <li> <Link to="/geografia" className="Link" onClick={closeMenu}>Geografia</Link></li>
+              <li> <Link to="/wf" className="Link" onClick={closeMenu}>Wf</Link></li>
+              <li> <Link to="/plastyka" className="Link" onClick={closeMenu}>Plastyka</Link></li>
+              <li> <Link to="/muzyka" className="Link" onClick={closeMenu}>Muzyka</Link></li>
+              <li> <Link to="/wos" className="Link" onClick={closeMenu}>Wos</Link></li>
+              <li> <Link to="/biologia" className="Link" onClick={closeMenu}>Biologia</Link></li>
             </ul>
           </ul>
           <ul>
