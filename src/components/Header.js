@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Header.css'; // Stylizacja CSS
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubjectOpen, setIsSubjectOpen] = useState(false);
   const [isKierunekOpen, setIsKierunekOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-
+  const location = useLocation(); // Get the current route location
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -29,7 +29,7 @@ function Header() {
     setIsSubjectOpen(false);
     setIsKierunekOpen(false);
   };
-
+  if (location.pathname === '/') {
   return (
     <header className="main-page">
       <div className="header">
@@ -88,7 +88,7 @@ function Header() {
       </nav>
     </header>
   );
-}
+}}
 
 export default Header;
 

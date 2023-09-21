@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import MainPage from './components/MainPage';
-import Polski from './components/Przedmioty/Polski'; // Importuj komponent Polski
+import Polski from './components/Przedmioty/Polski'; 
 import Angielski from './components/Przedmioty/Angielski'; 
 import Biologia from './components/Przedmioty/Biologia'; 
 import Geografia from './components/Przedmioty/Geografia'; 
