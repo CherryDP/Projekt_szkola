@@ -55,19 +55,19 @@ function Header() {
           <ul>
             <ul onClick={toggleSubject}>Przedmioty</ul>
             <ul className={`submenu ${isSubjectOpen ? 'open' : ''}`}>
-              <li> <Link to="/polski" className="Link" onClick={closeMenu}>J.Polski</Link></li>
-              <li> <Link to="/angielski" className="Link" onClick={closeMenu}>J.Angielski</Link></li>
-              <li> <Link to="/niemiecki" className="Link" onClick={closeMenu}>J.Niemiecki</Link></li>
-              <li> <Link to="/rosyjski" className="Link" onClick={closeMenu}>J.Rosyjski</Link></li>
-              <li> <Link to="/hiszpanski" className="Link" onClick={closeMenu}>J.Hiszpański</Link></li>
-              <li> <Link to="/matematyka" className="Link" onClick={closeMenu}>Matematyka</Link></li>
-              <li> <Link to="/historia" className="Link" onClick={closeMenu}>Historia</Link></li>
-              <li> <Link to="/geografia" className="Link" onClick={closeMenu}>Geografia</Link></li>
-              <li> <Link to="/wf" className="Link" onClick={closeMenu}>Wf</Link></li>
-              <li> <Link to="/plastyka" className="Link" onClick={closeMenu}>Plastyka</Link></li>
-              <li> <Link to="/muzyka" className="Link" onClick={closeMenu}>Muzyka</Link></li>
-              <li> <Link to="/wos" className="Link" onClick={closeMenu}>Wos</Link></li>
-              <li> <Link to="/biologia" className="Link" onClick={closeMenu}>Biologia</Link></li>
+               <Link to="/polski" className="Link" onClick={closeMenu}><li>J.Polski</li></Link>
+               <Link to="/angielski" className="Link" onClick={closeMenu}><li>J.Angielski</li></Link>
+               <Link to="/niemiecki" className="Link" onClick={closeMenu}><li>J.Niemiecki</li></Link>
+               <Link to="/rosyjski" className="Link" onClick={closeMenu}><li>J.Rosyjski</li></Link>
+               <Link to="/hiszpanski" className="Link" onClick={closeMenu}><li>J.Hiszpański</li></Link>
+               <Link to="/matematyka" className="Link" onClick={closeMenu}><li>Matematyka</li></Link>
+               <Link to="/historia" className="Link" onClick={closeMenu}><li>Historia</li></Link>
+               <Link to="/geografia" className="Link" onClick={closeMenu}><li>Geografia</li></Link>
+               <Link to="/wf" className="Link" onClick={closeMenu}><li>Wf</li></Link>
+               <Link to="/plastyka" className="Link" onClick={closeMenu}><li>Plastyka</li></Link>
+               <Link to="/muzyka" className="Link" onClick={closeMenu}><li>Muzyka</li></Link>
+               <Link to="/wos" className="Link" onClick={closeMenu}><li>Wos</li></Link>
+               <Link to="/biologia" className="Link" onClick={closeMenu}><li>Biologia</li></Link>
             </ul>
           </ul>
           <ul>

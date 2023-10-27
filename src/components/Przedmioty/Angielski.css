@@ -1,0 +1,38 @@
+/* Add this CSS to your Polski.css file */
+.oscillating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .oscillating-tile {
+    width: 300px;
+    height: 400px;
+    background-color: #3498db;
+    margin: 20px;
+    animation: oscillate 2s infinite alternate;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add a smooth transition */
+    cursor: pointer;
+  }
+  
+  .oscillating-tile:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Add a subtle shadow on hover */
+  }
+  
+  h2 {
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    cursor: pointer;
+    color: #3498db;
+  }
+  
