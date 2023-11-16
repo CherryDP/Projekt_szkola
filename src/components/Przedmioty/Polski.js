@@ -16,13 +16,13 @@ function Polski() {
 
       <div className="oscillating-container">
         <div className="oscillating-tile">
-          <h2>Książki</h2>
+          <h2>Poziom Podstawowy</h2>
         </div>
         <div className="oscillating-tile">
-          <h2>Lektury</h2>
+          <h2>Poziom Rozszerzony</h2>
         </div>
         <div className="oscillating-tile">
-          <h2>Numerek</h2>
+          <h2>Steszczenia lektur</h2>
         </div>
       </div>
     </>
