@@ -1,12 +1,11 @@
-
-
 .MainPage{
    
     background-image: url("kwiatek.jpg");
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .container {
@@ -15,7 +14,7 @@
     align-items: center;
     height: 100vh;
   }
-  
+
   .login,
   .register {
     padding: 20px;
@@ -79,13 +78,15 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #000;
+
 }
 section 
 {
+  margin-left: 43%;
+  top: 25%;
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 400px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
