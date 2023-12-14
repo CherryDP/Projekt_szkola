@@ -13,46 +13,62 @@ function MainPage() {
   return (
     <div className="MainPage">
       <div className={`Login ${isRegistrationFormVisible ? 'hidden' : ''}`}>
-        <br></br>
-        <h1>Logowanie</h1>
-        <form>
-          {/* Tutaj umieść pola formularza logowania */}
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
+      <form>
+      <section>
+          <div className="signin">
+            <div className="content">
+              <h2>Sign In</h2>
+              <div className="form">
+                <div className="inputBox">
+                  <input type="text" required /> <i>Username</i>
+                </div>
+                <div className="inputBox">
+                  <input type="password" required /> <i>Password</i>
+                </div>
+                <div className="links">
+                  <a href="#">Forgot Password</a> <a href="#" onClick={toggleRegistrationForm}>{isRegistrationFormVisible ? 'Sign in' : 'Sign up'}</a>
+                </div>
+                <div className="inputBox">
+                  <input type="submit" value="Login" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Hasło:</label>
-            <input type="password" id="password" name="password" />
-          </div>
-          <button type="submit">Zaloguj się</button>
-        </form>
+        </section>
+      </form>
       </div>
 
       <div className={`Register ${isRegistrationFormVisible ? '' : 'hidden'}`}>
-        <br></br>
-        <h1>Rejestracja</h1>
         <form>
-          {/* Tutaj umieść pola formularza rejestracji */}
-          <div className="form-group">
-            <label htmlFor="newEmail">Nowy Email:</label>
-            <input type="email" id="newEmail" name="newEmail" />
+        <section>
+          <div className="signin">
+            <div className="content">
+              <h2>Sign up</h2>
+              <div className="form">
+                <div className="inputBox">
+                  <input type="text" required /> <i>Username</i>
+                </div>
+                <div className="inputBox">
+                  <input type="password" required /> <i>Password</i>
+                </div>
+                <div className="links">
+                  <a href="#" onClick={toggleRegistrationForm}>{isRegistrationFormVisible ? 'Sign in' : 'Sign up'}</a>
+                </div>
+                <div className="inputBox">
+                  <input type="submit" value="Register" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="newPassword">Nowe Hasło:</label>
-            <input type="password" id="newPassword" name="newPassword" />
-          </div>
-          <button type="submit">Zarejestruj się</button>
-        </form>
-      </div>
+        </section>
 
       {/* Przycisk do przełączania między formularzami */}
-      <button onClick={toggleRegistrationForm}>
+      <button >
         {isRegistrationFormVisible ? 'Powrót do logowania' : 'Rejestracja'}
       </button>
-
-      
-    </div>
+      </form>
+      </div>
+      </div>
   );
 }
 

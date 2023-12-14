@@ -6,7 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubjectOpen, setIsSubjectOpen] = useState(false);
   const [isKierunekOpen, setIsKierunekOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+
   const location = useLocation(); // Get the current route location
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,9 +20,7 @@ function Header() {
     setIsSubjectOpen(!isSubjectOpen);
   };
 
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
+
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -40,15 +38,7 @@ function Header() {
             <div className="bar"></div>
           </div>
         </div>
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Szukaj..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-          />
-          <button className="search-button">Szukaj</button>
-        </div>
+        
       </div>
       <nav className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="menu-content">
@@ -64,15 +54,8 @@ function Header() {
           <ul>
             <ul onClick={toggleKierunek}>Kierunki Zawodowe</ul>
             <ul className={`submenu ${isKierunekOpen ? 'open' : ''}`}>
-                <li>Technik Informatyk</li>
-                <li>Technik Programista</li>
-                <li>Technik Fotografii i multimediów</li>
-                <li>Technik Reklamy</li>
-                <li>Technik Grafiki i poligrafii cyfrowej</li>
-                <li>Technik Logistyk</li>
-                <li>Technik Mechatronik</li>
-                <li>Technik Automatyk</li>
-                <li>Technik Elektryk</li>
+       
+                <li>Technik Programista</li>                
             </ul>
           </ul>
         </div>
